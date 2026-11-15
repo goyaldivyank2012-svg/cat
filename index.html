@@ -1,0 +1,2267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f5f0">
+
+<title>PROJECT KITTY 🐈 — A Little More Love</title>
+
+<meta name="description" content="A heartfelt family proposal by Divyank about welcoming a kitten into the family.">
+
+<!-- FORCE WEBSITE TO START AT TOP -->
+<script>
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Remove an old section anchor when opening/reloading the website.
+  if (window.location.hash) {
+    history.replaceState(
+      null,
+      '',
+      window.location.pathname + window.location.search
+    );
+  }
+
+  window.addEventListener('pageshow', function () {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  });
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #f8f5f0;
+  --white: #fffdfa;
+  --lavender: #e8e0f0;
+  --purple: #85729d;
+  --deep: #544562;
+  --sage: #dce5d8;
+  --champagne: #eee2cf;
+  --text: #37313b;
+  --muted: #817987;
+  --border: #e9e2e9;
+  --shadow: 0 12px 40px rgba(79,61,86,.07);
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: min(1120px, 88%);
+  margin: auto;
+}
+
+.serif {
+  font-family: var(--serif);
+}
+
+.eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.section {
+  padding: 105px 0;
+}
+
+.section-heading {
+  font: 500 clamp(34px,5vw,52px)/1.2 var(--serif);
+  letter-spacing: -1px;
+  margin: 14px 0 18px;
+}
+
+.section-intro {
+  max-width: 620px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.center {
+  text-align: center;
+}
+
+.center .section-intro {
+  margin: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--deep);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--deep);
+  transition: .3s;
+}
+
+.btn:hover {
+  background: var(--purple);
+  transform: translateY(-3px);
+}
+
+/* NAVIGATION */
+
+nav {
+  height: 76px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248,245,240,.94);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(100,80,110,.08);
+}
+
+.nav-inner {
+  height: 100%;
+  width: min(1180px,90%);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font: 600 21px var(--serif);
+  color: var(--deep);
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links a {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--deep);
+}
+
+.nav-cta {
+  background: var(--lavender);
+  color: var(--deep) !important;
+  padding: 10px 17px;
+  border-radius: 30px;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: none;
+  color: var(--deep);
+  font-size: 25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  padding: 65px 0 85px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero h1 {
+  font: 500 clamp(48px,6.5vw,76px)/1.12 var(--serif);
+  letter-spacing: -2.5px;
+  margin: 24px 0;
+  max-width: 620px;
+}
+
+.hero h1 em {
+  color: var(--purple);
+  font-weight: 400;
+}
+
+.hero-text {
+  max-width: 455px;
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.hero-caption {
+  margin-top: 23px;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1.3px;
+}
+
+.hero-image-wrap {
+  position: relative;
+  padding: 15px;
+  background: white;
+  border-radius: 210px 210px 35px 35px;
+  box-shadow: var(--shadow);
+  transform: rotate(2deg);
+}
+
+.hero-image {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  border-radius: 200px 200px 25px 25px;
+}
+
+.floating-note {
+  position: absolute;
+  bottom: 45px;
+  left: -50px;
+  background: white;
+  padding: 18px 22px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  font: italic 16px var(--serif);
+  color: var(--deep);
+  transform: rotate(-5deg);
+}
+
+.hero-decor {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--lavender);
+  opacity: .38;
+  border-radius: 50%;
+  right: -180px;
+  top: 30px;
+  z-index: -1;
+}
+
+/* BIRTHDAY COUNTDOWN */
+
+.birthday {
+  background: var(--white);
+  padding: 65px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.birthday-inner {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.birthday-title {
+  font: 500 clamp(27px,4vw,38px) var(--serif);
+  color: var(--deep);
+  margin: 12px 0;
+}
+
+.birthday-description {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  max-width: 590px;
+  margin: 35px auto 0;
+  gap: 13px;
+}
+
+.countdown-box {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 22px 10px;
+  border-radius: 17px;
+}
+
+.countdown-number {
+  display: block;
+  font: 500 clamp(30px,5vw,47px) var(--serif);
+  color: var(--deep);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.birthday-footnote {
+  font-size: 11px;
+  color: var(--purple);
+  margin-top: 20px;
+}
+
+/* WHY A CAT */
+
+.intro {
+  background: var(--white);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.intro-quote {
+  font: italic 29px/1.5 var(--serif);
+  color: var(--deep);
+  border-left: 2px solid var(--purple);
+  padding-left: 25px;
+}
+
+.intro-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-top: 48px;
+}
+
+.reason-card {
+  background: var(--cream);
+  padding: 27px 22px;
+  border-radius: 17px;
+  transition: .3s;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card-icon {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.reason-card h3 {
+  font: 500 19px var(--serif);
+  margin-bottom: 10px;
+}
+
+.reason-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* RESPONSIBILITY */
+
+.responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
+  margin-top: 48px;
+}
+
+.responsibility-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 19px;
+  padding: 27px;
+  transition: .3s;
+}
+
+.responsibility-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.responsibility-card h3 {
+  font: 500 21px var(--serif);
+  margin: 13px 0 9px;
+}
+
+.responsibility-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.lifetime {
+  background: var(--deep);
+  color: white;
+  border-radius: 23px;
+  padding: 37px;
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.lifetime h3 {
+  font: 500 28px var(--serif);
+  margin-bottom: 7px;
+}
+
+.lifetime p {
+  color: #ddd3e4;
+  font-size: 13px;
+  max-width: 650px;
+}
+
+.lifetime-number {
+  font: 500 53px var(--serif);
+  white-space: nowrap;
+  color: #e7d9ef;
+}
+
+/* CONCERNS */
+
+.concerns {
+  background: var(--white);
+}
+
+.concern-list {
+  margin-top: 45px;
+  display: grid;
+  gap: 17px;
+}
+
+.concern {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  background: var(--cream);
+  border-radius: 19px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.concern-question {
+  padding: 29px;
+  background: var(--lavender);
+}
+
+.concern-question span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--deep);
+  font-weight: 700;
+}
+
+.concern-question h3 {
+  font: 500 24px/1.35 var(--serif);
+  margin-top: 12px;
+  color: var(--deep);
+}
+
+.concern-answer {
+  padding: 29px 34px;
+}
+
+.concern-answer p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 13px;
+}
+
+.concern-answer strong {
+  color: var(--deep);
+}
+
+.concern-answer ul {
+  padding-left: 20px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.concern-answer li {
+  margin: 9px 0;
+}
+
+.small-note {
+  background: #f0eee5;
+  border-left: 3px solid #b7b18e;
+  padding: 14px 17px;
+  font-size: 12px;
+  color: #77715c;
+  border-radius: 5px;
+  margin-top: 17px;
+}
+
+/* CHECKLIST */
+
+.checklist-section {
+  background: #e9e2ef;
+}
+
+.checklist-layout {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 65px;
+  margin-top: 50px;
+  align-items: start;
+}
+
+.checklist-side {
+  position: sticky;
+  top: 110px;
+}
+
+.checklist-side h3 {
+  font: 500 33px var(--serif);
+  margin: 14px 0;
+  color: var(--deep);
+}
+
+.checklist-side p {
+  color: #776e80;
+  font-size: 13px;
+}
+
+.progress-wrap {
+  margin-top: 28px;
+  background: rgba(255,255,255,.65);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: var(--deep);
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 7px;
+  background: #d8cedf;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--purple);
+  border-radius: 20px;
+  transition: width .4s;
+}
+
+.task-group {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 27px;
+  margin-bottom: 17px;
+  box-shadow: 0 5px 20px rgba(80,60,90,.04);
+}
+
+.task-group h3 {
+  font: 500 22px var(--serif);
+  margin-bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-group h3 span {
+  font: 600 10px var(--sans);
+  color: var(--purple);
+  letter-spacing: 1px;
+  align-self: center;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: #615968;
+  cursor: pointer;
+}
+
+.task:last-child {
+  border: none;
+}
+
+.task input {
+  accent-color: var(--purple);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task input:checked + span {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+/* CHOOSING KITTEN */
+
+.kitten-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.kitten-photo {
+  height: 480px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.kitten-points {
+  display: grid;
+  gap: 20px;
+}
+
+.kitten-point {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.kitten-point .check {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--sage);
+  border-radius: 50%;
+  color: #536b50;
+  font-size: 12px;
+}
+
+.kitten-point h3 {
+  font: 500 19px var(--serif);
+  margin-bottom: 5px;
+}
+
+.kitten-point p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* COMMITMENT */
+
+.commitment {
+  background: var(--deep);
+  color: white;
+  text-align: center;
+  padding: 115px 0;
+}
+
+.commitment .eyebrow {
+  color: #cbb9d9;
+}
+
+.commitment h2 {
+  font: 500 clamp(38px,5vw,59px)/1.3 var(--serif);
+  max-width: 800px;
+  margin: 25px auto;
+}
+
+.commitment h2 em {
+  color: #d9c5e7;
+}
+
+.commitment p {
+  color: #ddd3e4;
+  max-width: 650px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.commitment-points {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-top: 55px;
+}
+
+.commitment-point {
+  padding: 20px 12px;
+  border-top: 1px solid rgba(255,255,255,.2);
+  font: italic 17px var(--serif);
+  color: #e7dced;
+}
+
+/* FINAL */
+
+.final-section {
+  padding: 110px 0;
+  background: var(--cream);
+}
+
+.final-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.final-image {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 190px 190px 22px 22px;
+}
+
+.final-copy h2 {
+  font: 500 clamp(38px,5vw,56px)/1.2 var(--serif);
+  color: var(--deep);
+  margin: 20px 0;
+}
+
+.final-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.signature {
+  font: italic 25px var(--serif);
+  color: var(--deep);
+  margin-top: 30px;
+}
+
+.signature strong {
+  font-weight: 500;
+  color: var(--purple);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+footer p {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+footer .logo {
+  font-size: 18px;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 25px;
+    flex-direction: column;
+    gap: 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+
+  .reason-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .responsibility-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .intro-grid {
+    gap: 35px;
+  }
+
+  .checklist-layout {
+    gap: 30px;
+  }
+
+  .commitment-points {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .hero {
+    padding: 60px 0 75px;
+    min-height: auto;
+  }
+
+  .hero-grid,
+  .intro-grid,
+  .kitten-grid,
+  .final-grid,
+  .checklist-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 53px;
+  }
+
+  .hero-image-wrap {
+    width: 85%;
+    margin: 20px auto;
+  }
+
+  .hero-image {
+    height: 390px;
+  }
+
+  .floating-note {
+    left: -25px;
+    bottom: 25px;
+  }
+
+  .intro-quote {
+    font-size: 24px;
+  }
+
+  .reason-grid,
+  .responsibility-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .reason-card,
+  .responsibility-card {
+    padding: 19px 15px;
+  }
+
+  .reason-card h3,
+  .responsibility-card h3 {
+    font-size: 17px;
+  }
+
+  .lifetime {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px;
+  }
+
+  .lifetime-number {
+    font-size: 44px;
+  }
+
+  .concern {
+    grid-template-columns: 1fr;
+  }
+
+  .concern-question,
+  .concern-answer {
+    padding: 24px;
+  }
+
+  .checklist-side {
+    position: static;
+  }
+
+  .checklist-layout {
+    gap: 30px;
+  }
+
+  .task-group {
+    padding: 21px;
+  }
+
+  .kitten-photo {
+    height: 350px;
+  }
+
+  .commitment {
+    padding: 85px 0;
+  }
+
+  .commitment-points {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .final-image {
+    height: 390px;
+  }
+
+  .final-grid {
+    gap: 35px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .countdown {
+    gap: 7px;
+  }
+
+  .countdown-box {
+    padding: 18px 5px;
+  }
+
+  .countdown-label {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+@media(max-width: 370px) {
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .reason-grid,
+  .responsibility-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      PROJECT <span>KITTY 🐈</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#why">Why a cat?</a>
+      <a href="#responsibility">Responsibility</a>
+      <a href="#concerns">Your concerns</a>
+      <a href="#care">Care plan</a>
+      <a href="#kitten">Choosing a kitten</a>
+      <a href="#final" class="nav-cta">The proposal ♡</a>
+    </div>
+
+    <button class="menu-btn" id="menuBtn"
+      aria-label="Toggle navigation"
+      aria-expanded="false">☰</button>
+
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-decor"></div>
+
+  <div class="container hero-grid">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        A little proposal, from the heart
+      </div>
+
+      <h1>
+        A little more <em>love</em> in our home.
+      </h1>
+
+      <p class="hero-text">
+        An idea I've carried in my heart for over seven years.
+        A little proposal about welcoming a new family member.
+      </p>
+
+      <a href="#why" class="btn">
+        Explore my proposal <span>↓</span>
+      </a>
+
+      <div class="hero-caption">
+        PROJECT KITTY — A FAMILY PROPOSAL
+      </div>
+
+    </div>
+
+    <div class="hero-image-wrap reveal">
+
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=1000&q=85"
+        alt="An adorable kitten"
+      >
+
+      <div class="floating-note">
+        A little friend, a lifetime of care ♡
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- BIRTHDAY COUNTDOWN -->
+
+<section class="birthday" id="birthday">
+
+  <div class="container birthday-inner reveal">
+
+    <div class="eyebrow">
+      A little date to look forward to
+    </div>
+
+    <h2 class="birthday-title">
+      Counting down to my birthday ♡
+    </h2>
+
+    <p class="birthday-description">
+      26 November 2026 — A special day, and perhaps a little
+      extra room for a special dream.
+    </p>
+
+    <div class="countdown" id="countdown">
+
+      <div class="countdown-box">
+        <span class="countdown-number" id="days">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+
+      <div class="countdown-box">
+        <span class="countdown-number" id="hours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+
+      <div class="countdown-box">
+        <span class="countdown-number" id="minutes">00</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+
+      <div class="countdown-box">
+        <span class="countdown-number" id="seconds">00</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+
+    </div>
+
+    <p class="birthday-footnote" id="birthdayMessage">
+      Every second brings us a little closer. 💜
+    </p>
+
+  </div>
+</section>
+
+<!-- WHY A CAT -->
+
+<section class="section intro" id="why">
+
+  <div class="container">
+
+    <div class="intro-grid reveal">
+
+      <div class="intro-quote">
+        "Some wishes don't fade with time.
+        They simply grow a little more meaningful."
+      </div>
+
+      <div class="intro-copy">
+
+        <div class="eyebrow">01 — Why a cat?</div>
+
+        <h2 class="section-heading">
+          More than just a wish.
+        </h2>
+
+        <p>
+          This isn't a sudden birthday wish or something I've
+          decided on recently. My love for cats has been a part
+          of me for over seven years.
+        </p>
+
+        <p>
+          Over time, I've come to understand that having a cat
+          isn't just about cute photographs and cuddles.
+          It's about welcoming a living being into our home,
+          respecting its personality and being there for its needs.
+        </p>
+
+        <p>
+          I would love the opportunity to build that kind of
+          bond with a little companion, while making sure it
+          has a safe, comfortable and loving home.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="reason-grid">
+
+      <div class="reason-card reveal">
+        <div class="card-icon">♡</div>
+        <h3>Companionship</h3>
+        <p>
+          A cat can become a familiar and comforting presence,
+          with a bond that develops over time.
+        </p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="card-icon">🐾</div>
+        <h3>Unique personalities</h3>
+        <p>
+          Every cat is different. Some are playful, some are
+          quiet, and each deserves to be understood.
+        </p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="card-icon">🌿</div>
+        <h3>Learning to care</h3>
+        <p>
+          Looking after another living being teaches patience,
+          consistency and empathy.
+        </p>
+      </div>
+
+      <div class="reason-card reveal">
+        <div class="card-icon">✨</div>
+        <h3>A lifelong bond</h3>
+        <p>
+          With time, trust and care, a kitten could become
+          a much-loved member of our family.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESPONSIBILITY -->
+
+<section class="section" id="responsibility">
+
+  <div class="container">
+
+    <div class="center reveal">
+
+      <div class="eyebrow">
+        02 — Understanding the responsibility
+      </div>
+
+      <h2 class="section-heading">
+        Love comes with responsibility.
+      </h2>
+
+      <p class="section-intro">
+        I understand that a cat needs much more than affection.
+        Its health, safety, hygiene and happiness all depend
+        on consistent care.
+      </p>
+
+    </div>
+
+    <div class="responsibility-grid">
+
+      <div class="responsibility-card reveal">
+        <div class="card-icon">🥣</div>
+        <h3>Food & fresh water</h3>
+        <p>
+          Daily meals appropriate for its age, along with
+          clean drinking water throughout the day.
+        </p>
+      </div>
+
+      <div class="responsibility-card reveal">
+        <div class="card-icon">🧹</div>
+        <h3>Litter & hygiene</h3>
+        <p>
+          Regular litter maintenance, a clean environment
+          and proper hygiene.
+        </p>
+      </div>
+
+      <div class="responsibility-card reveal">
+        <div class="card-icon">🧶</div>
+        <h3>Play & companionship</h3>
+        <p>
+          Daily interaction, toys, stimulation and time
+          together without forcing affection.
+        </p>
+      </div>
+
+      <div class="responsibility-card reveal">
+        <div class="card-icon">🪮</div>
+        <h3>Grooming & care</h3>
+        <p>
+          Brushing, nail care when needed and attention
+          to coat, ears and general condition.
+        </p>
+      </div>
+
+      <div class="responsibility-card reveal">
+        <div class="card-icon">🩺</div>
+        <h3>Veterinary healthcare</h3>
+        <p>
+          Vaccinations, routine examinations, parasite
+          prevention and professional medical advice.
+        </p>
+      </div>
+
+      <div class="responsibility-card reveal">
+        <div class="card-icon">🏥</div>
+        <h3>Emergency expenses</h3>
+        <p>
+          Being financially prepared for unexpected illness,
+          accidents and urgent treatment.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="lifetime reveal">
+
+      <div>
+        <h3>A commitment measured in years.</h3>
+        <p>
+          Cats can live for 15–20 years or longer.
+          That means caring for a kitten through school,
+          changing routines, holidays and different stages
+          of life. I understand this is not a temporary commitment.
+        </p>
+      </div>
+
+      <div class="lifetime-number">
+        15–20+ <small style="font:12px var(--sans)">years</small>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- YOUR CONCERNS, MY SOLUTIONS -->
+
+<section class="section concerns" id="concerns">
+
+  <div class="container">
+
+    <div class="reveal">
+
+      <div class="eyebrow">
+        03 — Understanding your perspective
+      </div>
+
+      <h2 class="section-heading">
+        Your Concerns, My Solutions.
+      </h2>
+
+      <p class="section-intro">
+        I know that bringing a kitten home isn't a small decision.
+        There are practical challenges, and I don't expect you
+        to ignore them. Instead, I'd like to show you how we
+        could work through them together.
+      </p>
+
+    </div>
+
+    <div class="concern-list">
+
+      <!-- CONCERN 1 -->
+
+      <div class="concern reveal">
+
+        <div class="concern-question">
+          <span>CONCERN 01</span>
+          <h3>
+            "Nobody is home when we go out. Who will look after it?"
+          </h3>
+        </div>
+
+        <div class="concern-answer">
+
+          <p>
+            I understand this is probably one of the biggest
+            challenges. A kitten needs more supervision and
+            companionship than an adult cat, and I wouldn't
+            want it spending long periods without proper care.
+          </p>
+
+          <p><strong>Here's what I propose:</strong></p>
+
+          <ul>
+            <li>
+              <strong>Before school:</strong> I can help with
+              feeding, fresh water, litter cleaning and some
+              playtime before leaving.
+            </li>
+
+            <li>
+              <strong>During school hours:</strong> We can arrange
+              a trusted family member or responsible pet sitter
+              to check on the kitten and provide appropriate care.
+            </li>
+
+            <li>
+              <strong>After school:</strong> I will make time
+              for play, interaction, feeding according to schedule
+              and general care.
+            </li>
+
+            <li>
+              <strong>During holidays:</strong> We can arrange
+              a reliable caregiver in advance rather than leaving
+              the kitten unattended.
+            </li>
+
+            <li>
+              <strong>Unexpected situations:</strong> We can
+              identify a backup caregiver before bringing
+              the kitten home.
+            </li>
+          </ul>
+
+          <div class="small-note">
+            My promise: We won't bring a kitten home until
+            we have a realistic supervision arrangement
+            that everyone in the family agrees with.
+            If nobody can provide the necessary care, we should wait.
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONCERN 2 -->
+
+      <div class="concern reveal">
+
+        <div class="concern-question">
+          <span>CONCERN 02</span>
+          <h3>
+            "You'll be excited initially, but who will do all the work later?"
+          </h3>
+        </div>
+
+        <div class="concern-answer">
+
+          <p>
+            I understand why you might worry about this.
+            Getting excited about a kitten is easy.
+            Maintaining a daily routine, even when I'm busy
+            or tired, is the actual responsibility.
+          </p>
+
+          <p><strong>I want to make this a proper commitment:</strong></p>
+
+          <ul>
+            <li>
+              <strong>Every morning:</strong> Check water,
+              prepare meals and maintain the litter area.
+            </li>
+
+            <li>
+              <strong>Every afternoon:</strong> Spend dedicated
+              time playing and interacting with the kitten.
+            </li>
+
+            <li>
+              <strong>Every evening:</strong> Check food,
+              water, litter and the kitten's general wellbeing.
+            </li>
+
+            <li>
+              <strong>Every week:</strong> Help with grooming,
+              cleaning bowls and checking supplies.
+            </li>
+
+            <li>
+              <strong>Every month:</strong> Review supplies
+              and discuss health and care requirements with you.
+            </li>
+          </ul>
+
+          <p>
+            I also propose starting these responsibilities
+            before we even get a kitten.
+          </p>
+
+          <div class="small-note">
+            My idea: Give me a 30-day responsibility challenge.
+            I'll maintain a daily checklist and demonstrate
+            consistency with my existing responsibilities.
+            You can judge my actions rather than just my promises.
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONCERN 3 -->
+
+      <div class="concern reveal">
+
+        <div class="concern-question">
+          <span>CONCERN 03</span>
+          <h3>
+            "A cat is expensive. What about all the expenses?"
+          </h3>
+        </div>
+
+        <div class="concern-answer">
+
+          <p>
+            I know a cat isn't a one-time purchase.
+            There are recurring expenses and unexpected
+            medical costs, and I understand these need
+            to be considered before making a decision.
+          </p>
+
+          <p><strong>We can plan the expenses in advance:</strong></p>
+
+          <ul>
+            <li>
+              <strong>Food:</strong> Good-quality food suitable
+              for the kitten's age and nutritional needs.
+            </li>
+
+            <li>
+              <strong>Litter:</strong> Regular litter purchases
+              and hygiene supplies.
+            </li>
+
+            <li>
+              <strong>Healthcare:</strong> Vaccinations,
+              deworming, preventive treatments and routine
+              veterinary examinations.
+            </li>
+
+            <li>
+              <strong>Initial setup:</strong> Litter box,
+              carrier, scratching post, toys, bowls and bedding.
+            </li>
+
+            <li>
+              <strong>Emergency fund:</strong> Money reserved
+              for unexpected illness, accidents or treatment.
+            </li>
+          </ul>
+
+          <div class="small-note">
+            My proposal: Before adopting, we can research
+            actual local prices, prepare a monthly budget
+            and establish an emergency veterinary fund.
+            I don't expect you to take on an expense without
+            understanding what it involves.
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONCERN 4 -->
+
+      <div class="concern reveal">
+
+        <div class="concern-question">
+          <span>CONCERN 04</span>
+          <h3>
+            "What happens when we travel or go on holiday?"
+          </h3>
+        </div>
+
+        <div class="concern-answer">
+
+          <p>
+            Family trips shouldn't become a problem for the
+            kitten, and the kitten shouldn't become a reason
+            we cannot make family plans.
+          </p>
+
+          <p><strong>Here's how we could prepare:</strong></p>
+
+          <ul>
+            <li>Arrange a trusted pet sitter or experienced caregiver.</li>
+            <li>Prepare written feeding and care instructions.</li>
+            <li>Provide the caregiver with veterinary contact details.</li>
+            <li>Make sure someone can respond to emergencies.</li>
+            <li>Discuss suitable boarding options with our vet if necessary.</li>
+          </ul>
+
+          <div class="small-note">
+            We will arrange care before travelling.
+            An automatic feeder or water fountain can help
+            with routine needs, but cannot replace a person
+            checking on the kitten.
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONCERN 5 -->
+
+      <div class="concern reveal">
+
+        <div class="concern-question">
+          <span>CONCERN 05</span>
+          <h3>
+            "What about our furniture, cleanliness and the house?"
+          </h3>
+        </div>
+
+        <div class="concern-answer">
+
+          <p>
+            I understand that a kitten can scratch furniture,
+            shed fur and occasionally make a mess.
+            Keeping the home comfortable for everyone matters.
+          </p>
+
+          <p><strong>Some practical preparations:</strong></p>
+
+          <ul>
+            <li>Provide scratching posts and appropriate toys.</li>
+            <li>Keep the litter box in a suitable, accessible location.</li>
+            <li>Brush the kitten according to its coat requirements.</li>
+            <li>Clean accidents properly and maintain litter hygiene.</li>
+            <li>Use safe spaces and gradually introduce the kitten to the home.</li>
+            <li>Keep dangerous plants, chemicals, wires and small objects out of reach.</li>
+          </ul>
+
+          <div class="small-note">
+            We can kitten-proof the house before it arrives.
+            I will also help maintain the cleanliness of
+            the areas the kitten uses.
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONCERN 6 -->
+
+      <div class="concern reveal">
+
+        <div class="concern-question">
+          <span>CONCERN 06</span>
+          <h3>
+            "What if you lose interest or your routine changes?"
+          </h3>
+        </div>
+
+        <div class="concern-answer">
+
+          <p>
+            This is something I have thought about seriously.
+            A cat could live for 15–20 years or even longer.
+            School, exams, college and other parts of life
+            will change during that time.
+          </p>
+
+          <p><strong>My understanding:</strong></p>
+
+          <ul>
+            <li>Care cannot stop when school becomes busy.</li>
+            <li>We need a family backup plan for exam periods.</li>
+            <li>Moving or travelling must include the cat's needs.</li>
+            <li>Medical care cannot be postponed because it is inconvenient.</li>
+            <li>The responsibility continues after the initial excitement fades.</li>
+          </ul>
+
+          <div class="small-note">
+            I understand that I am 13 and cannot independently
+            manage every aspect of pet ownership. This would
+            be a family commitment, with me taking an active
+            and consistent role in everyday care.
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lifetime reveal" style="margin-top:35px;">
+
+      <div>
+        <h3>I'm not asking you to take a leap of faith.</h3>
+
+        <p>
+          I'm asking for an opportunity to demonstrate
+          responsibility, prepare a proper care plan and
+          discuss whether we can make this work together.
+          We don't have to rush into anything.
+        </p>
+      </div>
+
+      <div class="lifetime-number">♡</div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- DAILY CARE CHECKLIST -->
+
+<section class="section checklist-section" id="care">
+
+  <div class="container">
+
+    <div class="center reveal">
+
+      <div class="eyebrow">
+        04 — A practical care plan
+      </div>
+
+      <h2 class="section-heading">
+        A little routine, every day.
+      </h2>
+
+      <p class="section-intro">
+        This is the kind of routine I am prepared to follow.
+        Tick the tasks to explore the responsibilities.
+      </p>
+
+    </div>
+
+    <div class="checklist-layout">
+
+      <div class="checklist-side reveal">
+
+        <div class="eyebrow">
+          MY RESPONSIBILITY TRACKER
+        </div>
+
+        <h3>
+          Consistency matters more than promises.
+        </h3>
+
+        <p>
+          Every small task contributes to making a cat's
+          life healthier and happier.
+        </p>
+
+        <div class="progress-wrap">
+
+          <div class="progress-text">
+            <span>Tasks explored</span>
+            <span id="progressCount">0 / 11</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+        </div>
+
+        <p style="font-size:11px;margin-top:15px;">
+          This checklist is a planning tool, not a substitute
+          for completing actual care tasks.
+        </p>
+
+      </div>
+
+      <div class="reveal">
+
+        <div class="task-group">
+
+          <h3>Every single day <span>DAILY</span></h3>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Provide fresh drinking water.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Serve meals according to veterinary guidance.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Clean and maintain the litter area.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Spend time playing and interacting.</span>
+          </label>
+
+        </div>
+
+        <div class="task-group">
+
+          <h3>Every week <span>WEEKLY</span></h3>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Groom and brush as appropriate.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Wash food and water bowls thoroughly.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Check litter, food and hygiene supplies.</span>
+          </label>
+
+        </div>
+
+        <div class="task-group">
+
+          <h3>Monthly / periodic <span>ONGOING</span></h3>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Review food and litter supplies.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Review preventive healthcare with the vet.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Check weight, behaviour and general wellbeing.</span>
+          </label>
+
+          <label class="task">
+            <input type="checkbox" class="care-task">
+            <span>Discuss health or behaviour concerns with an adult.</span>
+          </label>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHOOSING THE RIGHT KITTEN -->
+
+<section class="section kitten-section" id="kitten">
+
+  <div class="container">
+
+    <div class="center reveal">
+
+      <div class="eyebrow">
+        05 — Choosing the right kitten
+      </div>
+
+      <h2 class="section-heading">
+        The right kitten, not just any kitten.
+      </h2>
+
+      <p class="section-intro">
+        Finding a kitten should be a careful decision.
+        Its health and welfare will always matter more
+        than its appearance or a particular date.
+      </p>
+
+    </div>
+
+    <div class="kitten-grid">
+
+      <img
+        class="kitten-photo reveal"
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1000&q=85"
+        alt="A beautiful kitten with bright eyes"
+        loading="lazy"
+      >
+
+      <div class="kitten-points">
+
+        <div class="kitten-point reveal">
+          <div class="check">✓</div>
+          <div>
+            <h3>Veterinary examination</h3>
+            <p>
+              A qualified veterinarian should examine the
+              kitten before adoption or purchase.
+            </p>
+          </div>
+        </div>
+
+        <div class="kitten-point reveal">
+          <div class="check">✓</div>
+          <div>
+            <h3>Health and vaccination records</h3>
+            <p>
+              Check medical history, vaccination records,
+              deworming and any previous treatment.
+            </p>
+          </div>
+        </div>
+
+        <div class="kitten-point reveal">
+          <div class="check">✓</div>
+          <div>
+            <h3>Appropriate age</h3>
+            <p>
+              A kitten should not be separated from its mother
+              too early. Around 12–14 weeks is a sensible
+              target where possible, with individual veterinary guidance.
+            </p>
+          </div>
+        </div>
+
+        <div class="kitten-point reveal">
+          <div class="check">✓</div>
+          <div>
+            <h3>Responsible background</h3>
+            <p>
+              Ask about the parents, health history,
+              socialisation and conditions in which
+              the kitten was raised.
+            </p>
+          </div>
+        </div>
+
+        <div class="kitten-point reveal">
+          <div class="check">✓</div>
+          <div>
+            <h3>No impulse purchases</h3>
+            <p>
+              We should avoid questionable sellers,
+              unhealthy breeding practices and rushed decisions.
+            </p>
+          </div>
+        </div>
+
+        <div class="small-note">
+          I may especially love Ragdolls, but I would be
+          open to the kitten that is genuinely right for
+          our family. A healthy, well-socialised companion
+          matters most.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE COMMITMENT -->
+
+<section class="commitment">
+
+  <div class="container reveal">
+
+    <div class="eyebrow">
+      06 — The part that matters most
+    </div>
+
+    <h2>
+      This isn't just about getting a kitten.
+      <em>It's about taking care of one.</em>
+    </h2>
+
+    <p>
+      I understand that cats are living beings with their own
+      needs, feelings and personalities. They can become ill,
+      need medical attention and sometimes require extra
+      patience. They deserve consistent care even when life
+      gets busy. This commitment would last long beyond a birthday.
+    </p>
+
+    <div class="commitment-points">
+
+      <div class="commitment-point">
+        Patience, every day.
+      </div>
+
+      <div class="commitment-point">
+        Care, even when it's difficult.
+      </div>
+
+      <div class="commitment-point">
+        Love without conditions.
+      </div>
+
+      <div class="commitment-point">
+        Responsibility for life.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL PROPOSAL -->
+
+<section class="final-section" id="final">
+
+  <div class="container final-grid">
+
+    <img
+      class="final-image reveal"
+      src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?auto=format&fit=crop&w=1000&q=85"
+      alt="A sweet kitten resting comfortably"
+      loading="lazy"
+    >
+
+    <div class="final-copy reveal">
+
+      <div class="eyebrow">
+        One last little thought
+      </div>
+
+      <h2>
+        Maybe there's room for one more little heartbeat in our home.
+      </h2>
+
+      <p>
+        I don't expect an immediate answer. I just wanted to
+        show you that this means a lot to me, and that I've
+        thought about what welcoming a cat would actually involve.
+      </p>
+
+      <p>
+        I know that the decision affects everyone in our family.
+        I would love for us to discuss it together, look at the
+        practical details and decide whether this is something
+        we can genuinely make work.
+      </p>
+
+      <p>
+        Thank you for taking the time to read my little proposal.
+        Whatever the answer, I wanted you to understand why
+        this matters so much to me.
+      </p>
+
+      <div class="signature">
+        With love,<br>
+        <strong>Divyank 💜</strong>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <a href="#home" class="logo">
+      PROJECT <span>KITTY 🐈</span>
+    </a>
+
+    <p>A little proposal, made with love. © 2026</p>
+
+    <p>Made with ♡ by Divyank</p>
+
+  </div>
+
+</footer>
+
+<script>
+
+// ==========================================
+// 1. MOBILE NAVIGATION
+// ==========================================
+
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+
+  const isOpen = navLinks.classList.toggle('open');
+
+  menuBtn.setAttribute('aria-expanded', isOpen);
+  menuBtn.textContent = isOpen ? '✕' : '☰';
+
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+  link.addEventListener('click', () => {
+
+    navLinks.classList.remove('open');
+
+    menuBtn.textContent = '☰';
+    menuBtn.setAttribute('aria-expanded', 'false');
+
+  });
+
+});
+
+
+// ==========================================
+// 2. SCROLL REVEAL ANIMATIONS
+// ==========================================
+
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+
+    }
+
+  });
+
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
+
+
+// ==========================================
+// 3. LIVE BIRTHDAY COUNTDOWN
+// ==========================================
+
+// Birthday: 26 November 2026
+// Uses the visitor's local timezone.
+
+const birthdayDate = new Date(2026, 10, 26, 0, 0, 0);
+
+const daysElement = document.getElementById('days');
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+
+const birthdayMessage = document.getElementById('birthdayMessage');
+const countdown = document.getElementById('countdown');
+
+function updateCountdown() {
+
+  const now = new Date();
+
+  const difference = birthdayDate.getTime() - now.getTime();
+
+  if (difference <= 0) {
+
+    countdown.style.display = 'none';
+
+    birthdayMessage.textContent =
+      "It's my birthday! Happy 26th November! 🎂💜";
+
+    return;
+
+  }
+
+  const days = Math.floor(
+    difference / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (difference / (1000 * 60 * 60)) % 24
+  );
+
+  const minutes = Math.floor(
+    (difference / (1000 * 60)) % 60
+  );
+
+  const seconds = Math.floor(
+    (difference / 1000) % 60
+  );
+
+  daysElement.textContent = String(days).padStart(2, '0');
+
+  hoursElement.textContent = String(hours).padStart(2, '0');
+
+  minutesElement.textContent = String(minutes).padStart(2, '0');
+
+  secondsElement.textContent = String(seconds).padStart(2, '0');
+
+}
+
+// Update immediately, then every second.
+
+updateCountdown();
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+
+// ==========================================
+// 4. INTERACTIVE CARE CHECKLIST
+// ==========================================
+
+const tasks = document.querySelectorAll('.care-task');
+
+const progressCount = document.getElementById('progressCount');
+
+const progressFill = document.getElementById('progressFill');
+
+function updateProgress() {
+
+  const completed = document.querySelectorAll(
+    '.care-task:checked'
+  ).length;
+
+  const total = tasks.length;
+
+  const percentage = (completed / total) * 100;
+
+  progressCount.textContent = `${completed} / ${total}`;
+
+  progressFill.style.width = `${percentage}%`;
+
+}
+
+tasks.forEach(task => {
+
+  task.addEventListener('change', updateProgress);
+
+});
+
+updateProgress();
+
+
+// ==========================================
+// 5. ENSURE PAGE OPENS AT THE TOP
+// ==========================================
+
+window.addEventListener('load', () => {
+
+  if (!window.location.hash) {
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
