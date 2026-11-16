@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1046,6 +1045,92 @@ footer .logo {
     grid-template-columns: 1fr;
   }
 }
+
+/* SAY YES BUTTON + CELEBRATION */
+
+.say-yes-wrap {
+  margin-top: 30px;
+}
+
+.say-yes-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 16px 30px;
+  border: 1px solid var(--deep);
+  border-radius: 40px;
+  background: var(--deep);
+  color: #fff;
+  font: 600 14px var(--sans);
+  box-shadow: 0 10px 25px rgba(84,69,98,.18);
+  transition: .3s ease;
+}
+
+.say-yes-btn:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  transform: translateY(-3px);
+}
+
+.say-yes-btn:disabled {
+  opacity: .7;
+  cursor: wait;
+  transform: none;
+}
+
+.say-yes-message {
+  display: none;
+  margin-top: 20px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: var(--white);
+  color: var(--deep);
+  box-shadow: var(--shadow);
+  font: 500 19px/1.5 var(--serif);
+}
+
+.say-yes-message.show {
+  display: block;
+  animation: messagePop .55s ease both;
+}
+
+.say-yes-message small {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font: 12px/1.6 var(--sans);
+}
+
+.confetti-piece {
+  position: fixed;
+  top: -20px;
+  z-index: 9999;
+  width: 9px;
+  height: 14px;
+  pointer-events: none;
+  animation: confettiFall var(--fall-time, 3s) linear forwards;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translate3d(var(--drift), 110vh, 0) rotate(900deg);
+    opacity: .15;
+  }
+}
+
+@keyframes messagePop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 </style>
 </head>
 
@@ -2059,6 +2144,25 @@ footer .logo {
         <strong>Divyank 💜</strong>
       </div>
 
+      <!-- SAY YES BUTTON -->
+
+      <div class="say-yes-wrap">
+
+        <button type="button" class="say-yes-btn" id="sayYesBtn">
+          Say yes <span aria-hidden="true">🐾</span>
+        </button>
+
+        <div class="say-yes-message" id="sayYesMessage" role="status" aria-live="polite">
+          You just made my day! 💜🐈
+          <small>
+            Thank you for giving this little dream a chance.
+            We can take the next steps together, thoughtfully
+            and responsibly.
+          </small>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
@@ -2256,6 +2360,137 @@ window.addEventListener('load', () => {
       left: 0,
       behavior: 'instant'
     });
+
+  }
+
+});
+
+
+// ==========================================
+// 6. SAY YES: CONFETTI + EMAIL NOTIFICATION
+// ==========================================
+
+const sayYesBtn = document.getElementById('sayYesBtn');
+const sayYesMessage = document.getElementById('sayYesMessage');
+
+function launchConfetti() {
+
+  const colors = [
+    '#85729d',
+    '#d9c5e7',
+    '#eee2cf',
+    '#dce5d8',
+    '#b79acb'
+  ];
+
+  for (let i = 0; i < 90; i++) {
+
+    const piece = document.createElement('span');
+
+    piece.className = 'confetti-piece';
+
+    piece.style.left = `${Math.random() * 100}vw`;
+
+    piece.style.background =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    piece.style.borderRadius =
+      Math.random() > 0.5 ? '50%' : '2px';
+
+    piece.style.setProperty(
+      '--drift',
+      `${(Math.random() - 0.5) * 260}px`
+    );
+
+    piece.style.setProperty(
+      '--fall-time',
+      `${2.2 + Math.random() * 2.2}s`
+    );
+
+    piece.style.animationDelay =
+      `${Math.random() * 0.45}s`;
+
+    document.body.appendChild(piece);
+
+    piece.addEventListener(
+      'animationend',
+      () => piece.remove(),
+      { once: true }
+    );
+
+  }
+}
+
+
+sayYesBtn.addEventListener('click', async () => {
+
+  if (sayYesBtn.disabled) return;
+
+  sayYesBtn.disabled = true;
+
+  sayYesBtn.innerHTML = 'Sending your little yes… 💜';
+
+  sayYesMessage.classList.add('show');
+
+  launchConfetti();
+
+  try {
+
+    const response = await fetch(
+      'https://formsubmit.co/ajax/goyal.divyank2012@gmail.com',
+      {
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+
+        body: JSON.stringify({
+          name: 'PROJECT KITTY — Family response',
+
+          _subject: '🐾 PROJECT KITTY: They said YES!',
+
+          message:
+            'A YES was clicked on the PROJECT KITTY proposal website. ' +
+            'The family is open to discussing welcoming a kitten. 💜'
+        })
+      }
+    );
+
+    const result = await response.json();
+
+    // FormSubmit can return HTTP 200 even when it refuses a submission.
+    if (String(result.success) !== 'true') {
+
+      throw new Error(
+        result.message || 'The email service did not accept the message.'
+      );
+
+    }
+
+    sayYesBtn.innerHTML = 'Yes received! 🐾';
+
+    sayYesMessage.innerHTML =
+      'You just made my day! 💜🐈' +
+      '<small>Your response has been emailed successfully. ' +
+      'Thank you for giving this little dream a chance. ' +
+      'We can take the next steps together, thoughtfully and responsibly.</small>';
+
+  } catch (error) {
+
+    sayYesBtn.disabled = false;
+
+    sayYesBtn.innerHTML = 'Try sending again 🐾';
+
+    sayYesMessage.innerHTML =
+      'That means so much to me! 💜🐈' +
+      '<small>The celebration worked, but the email could not be confirmed. ' +
+      'Please try again when the website is online. ' +
+      'If this is the first submission, FormSubmit may need you to confirm ' +
+      'the activation email sent to the recipient inbox.</small>';
+
+    console.error('PROJECT KITTY email error:', error);
 
   }
 
